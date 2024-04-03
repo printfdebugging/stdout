@@ -164,6 +164,8 @@ function installYay() {
     fi
 }
 
+command -v yay || installYay
+packageInstall
 setup
 
 
