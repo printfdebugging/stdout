@@ -59,6 +59,7 @@ function setup() {
     /home/$USER/.local/bin/buildsuckless
 
     sudo cp /usr/share/fontconfig/conf.avail/75-twemoji.conf /etc/fonts/conf.d/
+    rm -rf ~/stdout
 
     reboot
 }
