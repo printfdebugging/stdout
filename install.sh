@@ -53,6 +53,7 @@ function setup() {
 
     git clone git@github.com:printfdebugging/stdout.git ~/repos/stdout
     git clone git@github.com:printfdebugging/computer-graphics.git ~/repos/computer-graphics
+    git clone git@github.com:printfdebugging/files.git ~/repos/files
 
     # light
     sudo usermod -aG video $USER
@@ -79,6 +80,7 @@ function packageInstall() {
         "neovim"
         "npm"
         "make"
+        "alacritty"
 
         # dwm dependencies
         "base-devel"
