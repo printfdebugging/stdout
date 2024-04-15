@@ -21,7 +21,8 @@ function setup() {
     mkdir -p ~/.config
     mkdir -p ~/.local
     mkdir -p ~/.cache
-    mkdir -p ~/repos
+    mkdir -p ~/repos/media
+    mkdir -p ~/repos/github
     mkdir -p ~/downloads
 
 
@@ -46,14 +47,28 @@ function setup() {
     git clone git@github.com:printfdebugging/.dotfiles.git ~/.dotfiles
     rm -rf ~/.ssh
 
-    cd ~/.dotfiles && stow .
+    cd ~/.dotfiles && stow . --no-folding
     cd
 
     chmod 400 ~/.ssh/id_ed25519
 
-    git clone git@github.com:printfdebugging/stdout.git ~/repos/stdout
-    git clone git@github.com:printfdebugging/computer-graphics.git ~/repos/computer-graphics
-    git clone git@github.com:printfdebugging/files.git ~/repos/files
+    # personal git repositories
+    git clone git@github.com:printfdebugging/stdout.git ~/repos/github/stdout
+    git clone git@github.com:printfdebugging/files.git ~/repos/github/files
+
+    # work git repos/githubitories
+    git clone git@github.com:printfdebugging/neovim.git                             ~/repos/github/neovim
+    git clone git@github.com:printfdebugging/awesome.git                            ~/repos/github/awesome
+    git clone git@github.com:printfdebugging/neogit.git                             ~/repos/github/neogit
+    git clone git@github.com:printfdebugging/myplugin.git                           ~/repos/github/myplugin
+    git clone git@github.com:printfdebugging/interpreters.git                       ~/repos/github/interpreters
+    git clone git@github.com:printfdebugging/gtk-application-developement.git       ~/repos/github/gtk-application-developement
+    git clone git@github.com:printfdebugging/ray-tracing-in-one-weekend.git         ~/repos/github/ray-tracing-in-one-weekend
+    git clone git@github.com:printfdebugging/lua-embedding.git                      ~/repos/github/lua-embedding
+    git clone git@github.com:printfdebugging/files.git                              ~/repos/github/files
+    git clone git@github.com:printfdebugging/journal.git                            ~/repos/github/journal
+    git clone git@github.com:printfdebugging/printfdebugging.git                    ~/repos/github/printfdebugging
+
 
     # light
     sudo usermod -aG video $USER
@@ -80,6 +95,10 @@ function packageInstall() {
         "neovim"
         "npm"
         "make"
+        "direnv"
+        "evince"
+        "loupe"
+        # "xremap-x11-bin" # cool!
         "alacritty"
 
         # dwm dependencies
@@ -89,6 +108,7 @@ function packageInstall() {
         "libxinerama"
         "freetype2"
         "ttf-twemoji"
+        "ttf-jetbrains-mono-nerd"
         "fontconfig"
         "openssh"
         "patch"
@@ -98,6 +118,7 @@ function packageInstall() {
         "thunderbird"
         "cowsay"
         "cmake"
+        "obsidian"
         "xwallpaper"
         "xcompmgr"
         "xsel"
@@ -173,7 +194,8 @@ setup
 
 
 # ~/.dotfiles
-# ~/files
 # ~/repos
+#     files (obsidian dir)
 #     libreoffice
 #     ...
+
