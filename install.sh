@@ -21,7 +21,7 @@ function setup() {
     mkdir -p ~/.config
     mkdir -p ~/.local
     mkdir -p ~/.cache
-    mkdir -p ~/repos
+    mkdir -p ~/repos/media
     mkdir -p ~/downloads
 
 
@@ -51,9 +51,18 @@ function setup() {
 
     chmod 400 ~/.ssh/id_ed25519
 
+    # personal git repositories
     git clone git@github.com:printfdebugging/stdout.git ~/repos/stdout
-    git clone git@github.com:printfdebugging/computer-graphics.git ~/repos/computer-graphics
     git clone git@github.com:printfdebugging/files.git ~/repos/files
+    git clone git@github.com:printfdebugging/some-leetcode.git ~/repos/some-leetcode
+
+    # work git repositories
+    git clone git@github.com:printfdebugging/neovim.git ~/repos/neovim
+    git clone git@github.com:printfdebugging/neogit.git ~/repos/neogit
+    git clone git@github.com:printfdebugging/myplugin.git ~/repos/myplugin
+    git clone git@github.com:printfdebugging/computer-graphics.git ~/repos/computer-graphics
+    git clone git@github.com:printfdebugging/printfdebugging.github.io.git ~/repos/website
+
 
     # light
     sudo usermod -aG video $USER
@@ -80,6 +89,7 @@ function packageInstall() {
         "neovim"
         "npm"
         "make"
+        "xremap-x11-bin" # cool!
         "alacritty"
 
         # dwm dependencies
@@ -173,7 +183,8 @@ setup
 
 
 # ~/.dotfiles
-# ~/files
 # ~/repos
+#     files (obsidian dir)
 #     libreoffice
 #     ...
+
