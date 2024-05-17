@@ -46,7 +46,7 @@ function setup() {
     git clone git@github.com:printfdebugging/.dotfiles.git ~/.dotfiles
     rm -rf ~/.ssh
 
-    cd ~/.dotfiles && stow .
+    cd ~/.dotfiles && stow . --no-folding
     cd
 
     chmod 400 ~/.ssh/id_ed25519
