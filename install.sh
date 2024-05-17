@@ -106,6 +106,8 @@ function packageInstall() {
         "ansible"
         "stow"
         "thunderbird"
+        "network-manager-applet"
+        "pasystray"
         "cowsay"
         "cmake"
         "xwallpaper"
