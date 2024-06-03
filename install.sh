@@ -23,6 +23,7 @@ function setup() {
     mkdir -p ~/.cache
     mkdir -p ~/repos/media
     mkdir -p ~/repos/github
+    mkdir -p ~/repos/source
     mkdir -p ~/downloads
 
 
@@ -68,6 +69,7 @@ function setup() {
     git clone git@github.com:printfdebugging/files.git                              ~/repos/github/files
     git clone git@github.com:printfdebugging/journal.git                            ~/repos/github/journal
     git clone git@github.com:printfdebugging/printfdebugging.git                    ~/repos/github/printfdebugging
+    git clone git@github.com:printfdebugging/printf.css.git                         ~/repos/github/printf.css
 
 
     # light
