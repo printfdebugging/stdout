@@ -1,8 +1,0 @@
-source ./data/functions.sh
-
-install_aur_helper
-install_system_packages
-install_user_packages
-setup_ssh_keys_and_configs
-clone_git_repositories
-setup_shells_and_dwm

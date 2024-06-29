@@ -1,4 +1,4 @@
-LIBREOFFICE_ROOT_DIR="/home/$USER/repos/"
+LIBREOFFICE_ROOT_DIR="/home/$USER/repos"
 
 if ! [ -d $LIBREOFFICE_ROOT_DIR ] > /dev/null; then
     mkdir -p $LIBREOFFICE_ROOT_DIR
