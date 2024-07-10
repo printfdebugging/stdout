@@ -25,7 +25,7 @@ sudo pacman -S --needed 'base-devel' 'git' 'ccache' 'ant' 'apr' 'beanshell' 'blu
                         'python' 'qt5-base' 'redland' 'sane' 'serf' 'sh' \
                         'shared-mime-info' 'ttf-liberation' 'unixodbc' \
                         'unzip' 'xmlsec' 'zip' 'gtk4' 'qt6-base' 'zxing-cpp' \
-                        'abseil-cpp'
+                        'abseil-cpp' 'clang' 'llvm' 'llvm-libs'
 
 
 # clone the project
@@ -33,12 +33,16 @@ git clone https://gerrit.libreoffice.org/core $LIBREOFFICE_ROOT_DIR/libreoffice
 cd $LIBREOFFICE_ROOT_DIR/libreoffice
 
 # setup autogen.input and ccache
-echo "--enable-debug
---enable-dbgutil
+echo "--enable-dbgutil
 --without-java
 --without-help
 --without-doxygen
 --enable-kf5
+--enable-kf6
+--enable-compiler-plugins
+--with-system-libxml=no 
+CC=clang
+CXX=clang++
 " > autogen.input
 
 ccache --max-size 100G
