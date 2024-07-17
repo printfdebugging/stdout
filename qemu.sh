@@ -1,13 +1,14 @@
 #!/bin/bash
 
-sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils \
+sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils \
     openbsd-netcat ebtables iptables libguestfs
 
-sed s/#unix_sock_group\ =\ "libvirt"/unix_sock_group\ =\ "libvirt"/g \
-    /etc/libvirt/libvirtd.conf > /etc/libvirt/libvirtd.conf
+# uncomment these
+# unix_sock_group = "libvirt" 
+# unix_sock_rw_perms
 
-sed s/#unix_sock_rw_perms\ =\ "0770"/unix_sock_rw_perms\ =\ "0770"/g \
-    /etc/libvirt/libvirtd.conf > /etc/libvirt/libvirtd.conf
+# if the file is deleted/corrupted for some reason, then remove it and reinstall the
+# package owning the file
 
 sudo usermod -a -G libvirt $(whoami)
 newgrp libvirt
