@@ -19,6 +19,7 @@ qemu-img create -f qcow2 mac_hdd_ng.img 256G
 sed "s/CHANGEME/$USER/g" macOS-libvirt-Catalina.xml > macOS.xml
 virt-xml-validate macOS.xml
 
+# this might show some error, and installing qemu-full solves that
 virsh --connect qemu:///system define macOS.xml
 
 sudo setfacl -m u:libvirt-qemu:rx /home/$USER

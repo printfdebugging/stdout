@@ -43,7 +43,7 @@ echo "--enable-dbgutil
 --with-system-libxml=no 
 CC=clang
 CXX=clang++
-" > autogen.input
+" > /home/printfdebugging/repos/libreoffice/autogen.input
 
 ccache --max-size 100G
 
