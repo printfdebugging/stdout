@@ -7,3 +7,7 @@ cd dmg2img && makepkg -si
 cd /tmp 
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin && makepkg -si
+
+cd /tmp 
+git clone https://aur.archlinux.org/par.git
+cd par && makepkg -si
