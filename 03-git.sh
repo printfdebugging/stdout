@@ -5,6 +5,7 @@ if [ ! -d "$HOME/repos" ]; then
     mkdir -p $HOME/repos
 fi
 
+echo "$(ssh-keyscan -t rsa github.com)" > $HOME/.ssh/known_hosts
 
 gitrepos=(
     "git@github.com:printfdebugging/files.git"
