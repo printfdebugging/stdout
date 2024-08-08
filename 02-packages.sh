@@ -19,6 +19,8 @@ packages=(
     "brave-bin"
     "visual-studio-code-bin"
     "lua"
+    "luarocks"
+    "imagemagick"
     "cmake"
     "ansible"
     "neofetch"
