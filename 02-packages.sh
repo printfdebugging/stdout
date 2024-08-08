@@ -86,6 +86,7 @@ if ! command -v yay; then
     git clone https://aur.archlinux.org/yay-bin && cd yay-bin && makepkg -si
 fi
 
+yay -Syu --noconfirm
 
 for package in ${packages[@]}
 do
