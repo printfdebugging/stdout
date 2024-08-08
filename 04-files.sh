@@ -4,7 +4,7 @@
 # I cannot prefer anything but gnu stow at this point
 
 
-cd $HOME/.dotfiles && stow -R --no-dirs .
+cd $HOME/.dotfiles && stow -R --no-folding .
 
 
 cd $HOME/.dotfiles/.local/src
