@@ -2,7 +2,7 @@
 
 # install git if not present
 if ! command -v git; then
-    sudo pacman -S git
+    sudo pacman -S git --noconfirm
 fi
 
 git clone https://github.com/printfdebugging/.credentials.git ~/.credentials 

@@ -70,6 +70,7 @@ packages=(
     "openssh"
     "pasystray"
     "stow"
+    "npm"
 
     # Suckless Dependencies
     "base-devel"
