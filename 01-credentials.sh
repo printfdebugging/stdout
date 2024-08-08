@@ -5,7 +5,8 @@ if ! command -v git; then
     sudo pacman -S git
 fi
 
-git clone https://github.com/printfdebugging/.credentials.git ~/.credentials && cd ~/.credentials/
+git clone https://github.com/printfdebugging/.credentials.git ~/.credentials 
+cd ~/.credentials/
 
 # install ansible if not present
 if ! command -v ansible-vault; then
