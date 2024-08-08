@@ -11,6 +11,9 @@ gitrepos=(
     "git@github.com:printfdebugging/files.git"
     "git@github.com:printfdebugging/stdout.git"
     "git@github.com:printfdebugging/notes.git"
+
+    "git@github.com:printfdebugging/sfml-game-development.git"
+    "git@github.com:printfdebugging/interpreters.git"
 )
 
 cd $HOME/repos
